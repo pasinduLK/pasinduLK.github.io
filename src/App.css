@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Geist Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Creativity Title Styling */
+.mainpage-title {
+  color: rgb(12, 226, 12);
+  perspective: 1000px;
+  font-weight: bolder;
+}
+
+
+@keyframes ticketInfinite {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticket-infinite {
+  animation: ticketInfinite 40s linear infinite;
+}
+
+
+
+
+
+
+/* Perfect square card using aspect ratio */
+.square-card {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+/* Optional: If you want extra animation, add this in App.css */
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.gif-text {
+  background-image: url('/images/8.gif');
+  background-size: 110%;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #1bb43f, #02c8ff); /* Example gradient */
+  -webkit-background-clip: text; /* For older browsers */
+  background-clip: text;
+  color: transparent;
+}
+
+
+.subtitle{
+  background: linear-gradient(to right, #02c8ff, #1bb43f); /* Example gradient */
+  -webkit-background-clip: text; /* For older browsers */
+  background-clip: text;
+  color: transparent;
+}

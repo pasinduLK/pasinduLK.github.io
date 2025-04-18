@@ -1,0 +1,127 @@
+/* Basic styles for the masonry grid */
+.playground-grid {
+    display: flex;
+    margin-left: -20px; /* gutter size offset */
+    width: auto;
+  }
+  
+  .playground-grid_column {
+    padding-left: 20px; /* gutter size */
+    background-clip: padding-box;
+  }
+  
+  /* Style for individual items */
+  .playground-item {
+    position: relative; /* Needed for absolute positioning of the overlay */
+    margin-bottom: 20px; /* spacing between items */
+    overflow: hidden; /* Hide parts of overlay that might overflow */
+    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #27272a; /* Slightly lighter zinc for item background */
+    cursor: pointer; /* Indicate items are interactive */
+  }
+  
+  .playground-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Match parent */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom on hover */
+  }
+  
+  .playground-item:hover img {
+      transform: scale(1.03); /* Slight zoom effect on hover */
+  }
+  
+  /* Description Overlay */
+  .description-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: white;
+    padding: 12px 15px;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.4;
+    opacity: 0; /* Hidden by default */
+    transform: translateY(100%); /* Start below the item */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    pointer-events: none; /* Prevent overlay from blocking hover on image itself initially */
+    border-bottom-left-radius: 8px; /* Match parent */
+    border-bottom-right-radius: 8px;
+  }
+  
+  /* Style for when overlay should be visible (hover/tap) */
+  .description-overlay.visible {
+    opacity: 1;
+    transform: translateY(0); /* Slide in from bottom */
+    pointer-events: auto; /* Allow interaction if needed */
+  }
+  
+  /* Loading/Error/NoItems Message Styling */
+  .playground-message {
+      text-align: center;
+      color: #a1a1aa; /* Zinc 400 */
+      font-size: 1.125rem; /* 18px */
+      margin-top: 40px;
+  }
+
+
+ /* src/Playground.css */
+
+/* ... (keep existing styles for .playground-grid, .playground-grid_column) ... */
+
+.playground-item {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #27272a; /* zinc-800 */
+  cursor: pointer;
+  /* Add transition for potential size changes if needed */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Common style for img and video inside items */
+.playground-media {
+  display: block;
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Match parent */
+  transition: transform 0.3s ease-in-out;
+  background-color: #18181b; /* zinc-900 fallback background */
+}
+
+
+.playground-item:hover .playground-media { /* Apply hover to common class */
+    transform: scale(1.03);
+}
+
+/* ... (keep existing styles for .description-overlay and .playground-message) ... */
+
+.description-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 12px 15px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  pointer-events: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  /* Add max-height and overflow if descriptions can be long */
+  max-height: 50%; /* Example: limit height */
+  overflow-y: auto; /* Allow scrolling for long text */
+}
+
+.description-overlay.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+} 

@@ -1,0 +1,65 @@
+[
+
+    {
+      "type": "video",
+      "videoPath": "/playground/videos/godotplatformer.mp4",
+      "description": "Platformer game level made using Godot Engine,All the Assets are made by me",
+      "alt": "Godot Platformer gamer"
+    },
+    {
+      "type": "image",
+      "imagePath": "/playground/images/weapondesign.png",
+      "description": "Sci-Fi Gun Model, Blender 3D #EVEE",
+      "alt": "scifi gun model"
+    },    
+    {
+      "type": "video",
+      "videoPath": "/playground/videos/flyingsubmarine.webm",
+      "description": "Animated Videoclip Made using Blender 3D. #CYCLES",
+      "alt": "Blender animation video"
+    }, 
+    {
+      "type": "image",
+      "imagePath": "/playground/images/girlcharacterdesign.png",
+      "description": "Character Design of a girl made using Adobe Illustrator ",
+      "alt": "Girl head character design"
+    },    
+    {
+      "type": "image",
+      "imagePath": "/playground/images/duckillustrator.jpg",
+      "description": "Duck made using Adobe Illustrator",
+      "alt": "Duck made in Adobe illustrator"
+    },
+    {
+      "type": "image",
+      "imagePath": "/playground/images/enderbattotem.jpg",
+      "description": "Minecraft Totem Resoureses Pack, 1K+ Downloads",
+      "alt": "Minecraft Totem Design"
+    },
+    {
+      "type": "image",
+      "imagePath": "/playground/images/aliensculpture.png",
+      "description": "Alien Sculpture , Blender 3D",
+      "alt": "Alien Sculpture"
+    },
+    {
+      "type": "image",
+      "imagePath": "/playground/images/snipermodel3d.png",
+      "description": "Sniper Model, Blender 3D #CYCLES",
+      "alt": "Sniper model"
+    },
+    {
+      "type": "image",
+      "imagePath": "/playground/images/blenderanimals.png",
+      "description": "Sci-Fi Creature pack, Blender 3D",
+      "alt": "Scifi creatures"
+    },
+    {
+      "type": "video",
+      "videoPath": "/playground/videos/solarsystemcss.webm",
+      "description": "Expading Solarsystem animation made using CSS only.",
+      "alt": "CSS solar system Animation"
+    }
+
+
+  ]
